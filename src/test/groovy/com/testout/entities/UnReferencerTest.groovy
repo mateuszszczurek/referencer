@@ -69,7 +69,7 @@ class UnReferencerTest extends Specification {
         )
     }
 
-    def "reference resolution is stable even there are circular dependencies"() {
+    def "reference resolution is stable even if there are circular dependencies"() {
         given:
         def sut = new Entities(
                 [
