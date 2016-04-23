@@ -48,23 +48,6 @@ class UnReferencerTest extends Specification {
         sut.getReferences().containsAll(["reference1", "reference2"])
     }
 
-    def "should be able to combine entities"() {
-        given:
-        def firstEntity = new Entity("entityName", [key: "val"])
-        def secondEntity = new Entity("entityName2", [key: "val"])
-
-        when:
-        def result = firstEntity.combineWith(secondEntity)
-
-        then:
-        result == new Entities(
-                [
-                        entityName : [key: 'val'],
-                        entityName2: [key: 'val']
-                ]
-        )
-    }
-
     def "should be able to resolve entities with it's references"() {
         given:
         def sut = new Entities(

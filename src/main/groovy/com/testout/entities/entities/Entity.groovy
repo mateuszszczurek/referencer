@@ -21,7 +21,4 @@ class Entity {
         references*.drop(1)
     }
 
-    Entities combineWith(Entity otherEntity) {
-        return new Entities((entityName): fields, (otherEntity.entityName): otherEntity.fields)
-    }
 }
