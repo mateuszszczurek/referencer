@@ -7,7 +7,7 @@ import spock.lang.Unroll
 
 class UnReferencerTest extends Specification {
 
-    def "given json with entities, should be able to filter one entity"() {
+    def "given entities, should be able to filter one entity"() {
         given:
 
         def sut = new Entities(
